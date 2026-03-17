@@ -1,8 +1,3 @@
-/**
- * helloapp.java
- * UC6: Display Hello with Multiple Command-Line Arguments using substring()
- */
-
 public class helloapp {
 
     public static void main(String[] args) {
