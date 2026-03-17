@@ -2,16 +2,27 @@ public class helloapp {
 
     public static void main(String[] args) {
 
-        String name;
+        String name = "";
 
-        // If no arguments, use default
+        // Default if no arguments
         if (args.length == 0) {
             name = "World";
-        }
-
-        // If arguments exist, join all names
+        } 
+        
+        // Enhanced for loop for multiple names
         else {
-            name = String.join(", ", args);
+            StringBuilder nameBuilder = new StringBuilder();
+            boolean first = true;
+
+            for (String n : args) {
+                if (!first) {
+                    nameBuilder.append(", ");
+                }
+                nameBuilder.append(n);
+                first = false;
+            }
+
+            name = nameBuilder.toString();
         }
 
         System.out.println("Hello, " + name + "!");
